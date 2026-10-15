@@ -3,83 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>🌸 I desideri di Veronica & Giulia 🌸</title>
+<title>⭐ I desideri di Veronica & Giulia ⭐</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Dancing+Script:wght@600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--rosa:#e8a0b4;--rosa-s:#f7dbe3;--rosa-c:#fdf1f4;--rosa-d:#c86b88;--nero:#1f1a1c;--bianco:#fffdf9;--carta:#fbf5ef}
+:root{--rosa:#ff8fb8;--rosa-s:#ffc9dc;--rosa-c:#ffeef4;--rosa-d:#e8417e;--nero:#1b1418;--bianco:#fffaf7;--lilla:#c9b6f2;--giallo:#ffe17a}
 *{box-sizing:border-box}
-body{margin:0;font-family:'Lora',Georgia,serif;color:var(--nero);background:var(--carta);
-background-image:radial-gradient(circle at 10px 10px,rgba(232,160,180,.25) 2px,transparent 2.5px),radial-gradient(circle at 30px 30px,rgba(31,26,28,.06) 1.5px,transparent 2px);background-size:40px 40px;min-height:100vh}
-.wrap{max-width:1000px;margin:0 auto;padding:16px}
-header{text-align:center;padding:26px 12px 14px;position:relative}
-.ghirlanda{font-size:22px;letter-spacing:6px}
-h1{font-family:'Dancing Script',cursive;font-size:clamp(34px,8vw,58px);margin:6px 0 0;color:var(--nero)}
-h1 span{color:var(--rosa-d)}
-.sub{font-family:'Playfair Display',serif;font-style:italic;color:#6b5a60;margin:4px 0 0}
-.pizzo{height:14px;margin:14px auto;max-width:600px;background:radial-gradient(circle at 7px 0,transparent 6px,var(--rosa) 6.5px,var(--rosa) 7.5px,transparent 8px);background-size:14px 14px}
-.card{background:var(--bianco);border:1.5px solid var(--nero);border-radius:18px;box-shadow:4px 4px 0 var(--rosa);padding:16px;position:relative}
-.countdown{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
-.cd{text-align:center}
-.cd .nome{font-family:'Dancing Script',cursive;font-size:30px}
-.cd .num{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:var(--rosa-d);line-height:1}
-.cd .data{font-size:13px;color:#6b5a60}
-.cd::before{content:"🍄";position:absolute;top:-12px;left:-8px;font-size:22px}
-.cd.g::before{content:"🍓"}
-form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+body{margin:0;font-family:'Nunito',system-ui,sans-serif;color:var(--nero);background:var(--rosa-c);min-height:100vh;overflow-x:hidden}
+.deco{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.deco svg{position:absolute;opacity:.9}
+.wrap{max-width:1040px;margin:0 auto;padding:16px;position:relative;z-index:1}
+header{position:relative;margin:14px 0 22px;background:var(--rosa);border:3px solid var(--nero);border-radius:34px 28px 38px 26px;box-shadow:8px 8px 0 var(--nero);padding:30px 20px 26px;text-align:center;overflow:hidden}
+header .bg-star{position:absolute;opacity:.95}
+h1{position:relative;font-family:'Bagel Fat One',cursive;font-weight:400;font-size:clamp(40px,10vw,86px);line-height:.95;margin:0;color:var(--bianco);-webkit-text-stroke:3px var(--nero);paint-order:stroke fill;text-shadow:5px 5px 0 var(--nero);letter-spacing:1px}
+h1 .amp{color:var(--giallo)}
+.sub{position:relative;font-family:'Fredoka',sans-serif;font-weight:600;font-size:18px;margin:14px auto 0;display:inline-block;background:var(--bianco);border:2.5px solid var(--nero);border-radius:999px;padding:6px 18px;transform:rotate(-2deg)}
+.card{background:var(--bianco);border:3px solid var(--nero);border-radius:26px 20px 28px 18px;box-shadow:6px 6px 0 var(--nero);padding:18px;position:relative}
+.countdown{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+.cd{text-align:center;padding:16px 10px 14px}
+.cd.v{background:var(--bianco);transform:rotate(-1.2deg)}
+.cd.g{background:var(--nero);color:var(--bianco);transform:rotate(1.2deg);box-shadow:6px 6px 0 var(--rosa-d)}
+.cd .nome{font-family:'Bagel Fat One',cursive;font-size:30px}
+.cd .num{font-family:'Bagel Fat One',cursive;font-size:64px;line-height:1;color:var(--rosa-d)}
+.cd.g .num{color:var(--rosa)}
+.cd .data{font-family:'Fredoka',sans-serif;font-weight:500;font-size:14px}
+.cd .badge{position:absolute;top:-30px;right:-12px;width:74px;height:auto}
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
 form h2,.full{grid-column:1/-1}
-h2{font-family:'Playfair Display',serif;font-style:italic;margin:0 0 4px;font-size:22px}
-label{font-size:13px;color:#6b5a60;display:block;margin-bottom:3px}
-input,select,textarea{width:100%;font:inherit;padding:9px 11px;border:1.5px solid var(--nero);border-radius:12px;background:var(--rosa-c);color:var(--nero)}
-textarea{min-height:60px;resize:vertical}
-input:focus,select:focus,textarea:focus{outline:2px dashed var(--rosa-d);outline-offset:2px}
-button{font:inherit;cursor:pointer;border:1.5px solid var(--nero);border-radius:999px;padding:9px 18px;background:var(--rosa);color:var(--nero);font-weight:600;box-shadow:2px 2px 0 var(--nero);transition:transform .1s}
-button:active{transform:translate(2px,2px);box-shadow:none}
+h2{font-family:'Bagel Fat One',cursive;font-weight:400;margin:0 0 4px;font-size:30px}
+label{font-family:'Fredoka',sans-serif;font-weight:600;font-size:14px;display:block;margin-bottom:4px}
+input,select,textarea{width:100%;font:inherit;padding:10px 13px;border:2.5px solid var(--nero);border-radius:16px;background:var(--rosa-c);color:var(--nero)}
+input[type=file]{padding:7px}
+textarea{min-height:64px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;background:var(--bianco);box-shadow:3px 3px 0 var(--rosa-d)}
+button{font-family:'Fredoka',sans-serif;font-size:16px;cursor:pointer;border:2.5px solid var(--nero);border-radius:999px;padding:9px 20px;background:var(--rosa);color:var(--nero);font-weight:700;box-shadow:3px 3px 0 var(--nero);transition:transform .1s,box-shadow .1s}
+button:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--nero)}
+button:active{transform:translate(3px,3px);box-shadow:none}
 button.sec{background:var(--bianco)}
-button.nero{background:var(--nero);color:var(--bianco)}
 .azioni{display:flex;gap:8px;flex-wrap:wrap}
-.anteprima{max-width:120px;max-height:120px;border-radius:10px;border:1.5px solid var(--nero);display:none;margin-top:6px}
-.barra{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
-.barra input{flex:1;min-width:180px}
-.filtri{display:flex;gap:6px;flex-wrap:wrap}
-.filtri button{padding:7px 14px;font-size:14px;background:var(--bianco)}
-.filtri button.on{background:var(--nero);color:var(--bianco)}
-.griglia{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.anteprima{max-width:130px;max-height:130px;border-radius:18px;border:2.5px solid var(--nero);display:none;margin-top:6px}
+.barra{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.barra input{flex:1;min-width:200px;background:var(--bianco);box-shadow:3px 3px 0 var(--nero)}
+.filtri{display:flex;gap:8px;flex-wrap:wrap}
+.filtri button{padding:7px 16px;font-size:15px;background:var(--bianco)}
+.filtri button.on{background:var(--nero);color:var(--bianco);box-shadow:3px 3px 0 var(--rosa-d)}
+.griglia{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px}
 .item{padding:0;overflow:hidden;display:flex;flex-direction:column}
-.item .foto{aspect-ratio:1/1;background:var(--rosa-s);display:flex;align-items:center;justify-content:center;font-size:48px;border-bottom:1.5px solid var(--nero)}
+.item:nth-child(3n+1){transform:rotate(-.8deg)}.item:nth-child(3n+2){transform:rotate(.7deg)}
+.item .foto{aspect-ratio:1/1;background:var(--rosa-s);display:flex;align-items:center;justify-content:center;font-size:54px;border-bottom:3px solid var(--nero)}
+.item:nth-child(4n+2) .foto{background:var(--lilla)}.item:nth-child(4n+3) .foto{background:var(--giallo)}
 .item .foto img{width:100%;height:100%;object-fit:cover}
-.item .corpo{padding:12px;flex:1;display:flex;flex-direction:column;gap:6px}
-.item h3{margin:0;font-family:'Playfair Display',serif;font-size:19px}
-.tag{display:inline-block;font-size:12px;padding:2px 10px;border-radius:999px;border:1px solid var(--nero);margin-right:4px}
+.item .corpo{padding:13px;flex:1;display:flex;flex-direction:column;gap:7px}
+.item h3{margin:0;font-family:'Fredoka',sans-serif;font-weight:700;font-size:20px;line-height:1.15}
+.tag{display:inline-block;font-family:'Fredoka',sans-serif;font-weight:600;font-size:12px;padding:2px 11px;border-radius:999px;border:2px solid var(--nero);margin-right:4px}
 .tag.v{background:var(--rosa)}.tag.gi{background:var(--nero);color:var(--bianco)}.tag.c{background:var(--bianco)}
-.prezzo{font-family:'Playfair Display',serif;font-weight:700;color:var(--rosa-d)}
-.note{font-size:14px;color:#4a3d42;font-style:italic;white-space:pre-wrap}
-.item a.link{color:var(--nero);font-size:14px;word-break:break-all}
-.item .azioni button{padding:5px 12px;font-size:13px}
-.vuoto{text-align:center;padding:40px;font-style:italic;color:#6b5a60;grid-column:1/-1}
-.stato{position:fixed;bottom:12px;right:12px;background:var(--bianco);border:1.5px solid var(--nero);border-radius:999px;padding:6px 14px;font-size:13px;box-shadow:2px 2px 0 var(--rosa);z-index:9}
-footer{text-align:center;margin:30px 0 60px;font-size:13px;color:#6b5a60}
-footer button{font-size:12px;padding:5px 12px;margin:3px}
-@media(max-width:600px){form{grid-template-columns:1fr}.countdown{gap:10px}.cd .num{font-size:30px}.cd .nome{font-size:24px}.griglia{grid-template-columns:1fr 1fr;gap:12px}.item h3{font-size:16px}}
+.prezzo{font-family:'Bagel Fat One',cursive;font-size:20px;color:var(--rosa-d)}
+.note{font-size:14px;white-space:pre-wrap}
+.item a.link{color:var(--nero);font-weight:700;font-size:14px}
+.item .azioni button{padding:5px 13px;font-size:14px}
+.vuoto{text-align:center;padding:40px 20px;font-family:'Fredoka',sans-serif;font-size:18px;grid-column:1/-1}
+.vuoto svg{display:block;margin:0 auto 10px}
+.stato{position:fixed;bottom:12px;right:12px;background:var(--bianco);border:2.5px solid var(--nero);border-radius:999px;padding:6px 14px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:13px;box-shadow:3px 3px 0 var(--nero);z-index:9}
+footer{text-align:center;margin:34px 0 70px;font-family:'Fredoka',sans-serif;font-weight:500;font-size:14px}
+footer button{font-size:13px;padding:5px 13px;margin:4px}
+@media(max-width:600px){header{padding:24px 12px 20px;box-shadow:5px 5px 0 var(--nero)}h1{-webkit-text-stroke:2px var(--nero);text-shadow:3px 3px 0 var(--nero)}.sub{font-size:15px}form{grid-template-columns:1fr}.countdown{gap:12px}.cd .num{font-size:46px}.cd .nome{font-size:22px}.cd .data{font-size:12px}.cd .badge{width:44px;height:44px;top:-18px}.griglia{grid-template-columns:1fr 1fr;gap:14px}.item h3{font-size:16px}.card{box-shadow:4px 4px 0 var(--nero)}.deco svg.hide-m{display:none}}
 @media(max-width:380px){.griglia{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<div class="deco" aria-hidden="true">
+<svg viewBox="0 0 100 100" style="width:60px;top:12%;left:2%;transform:rotate(-12deg)"><path d="M50 4 61 38 97 38 68 59 79 94 50 72 21 94 32 59 3 38 39 38Z" fill="#ff8fb8" stroke="#1b1418" stroke-width="4" stroke-linejoin="round"/></svg>
+<svg viewBox="0 0 100 100" style="width:34px;top:30%;right:3%"><path d="M50 2C54 38 62 46 98 50 62 54 54 62 50 98 46 62 38 54 2 50 38 46 46 38 50 2Z" fill="#ffe17a" stroke="#1b1418" stroke-width="4" stroke-linejoin="round"/></svg>
+<svg viewBox="0 0 100 100" style="width:40px;top:55%;left:1.5%;transform:rotate(-15deg)"><path d="M50 88C20 66 6 50 8 32 10 16 30 8 50 28 70 8 90 16 92 32 94 50 80 66 50 88Z" fill="#ff8fb8" stroke="#1b1418" stroke-width="5" stroke-linejoin="round"/></svg>
+<svg viewBox="0 0 160 40" class="hide-m" style="width:110px;top:72%;right:1%;transform:rotate(-20deg)"><path d="M5 20Q20 2 35 20T65 20T95 20T125 20T155 20" fill="none" stroke="#1b1418" stroke-width="7" stroke-linecap="round"/></svg>
+<svg viewBox="0 0 160 40" class="hide-m" style="width:120px;top:40%;left:-1%;transform:rotate(80deg)"><path d="M5 30 25 8 45 30 65 8 85 30 105 8 125 30 145 8" fill="none" stroke="#c9b6f2" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg viewBox="0 0 120 110" class="hide-m" style="width:90px;bottom:4%;left:2%;transform:rotate(-8deg)"><path d="M20 30C14 8 46 2 60 14 76 2 108 8 102 34 118 50 112 84 92 92 80 108 40 108 28 94 6 88 2 52 20 30Z" fill="#c9b6f2" stroke="#1b1418" stroke-width="4"/><ellipse cx="44" cy="52" rx="7" ry="9" fill="#1b1418"/><ellipse cx="78" cy="52" rx="7" ry="9" fill="#1b1418"/><circle cx="46" cy="49" r="2.5" fill="#fff"/><circle cx="80" cy="49" r="2.5" fill="#fff"/><path d="M54 66q7 7 14 0" fill="none" stroke="#1b1418" stroke-width="4" stroke-linecap="round"/><ellipse cx="34" cy="66" rx="7" ry="4" fill="#e8417e" opacity=".6"/><ellipse cx="88" cy="66" rx="7" ry="4" fill="#e8417e" opacity=".6"/></svg>
+<svg viewBox="0 0 100 100" style="width:28px;top:85%;right:6%"><path d="M50 2C54 38 62 46 98 50 62 54 54 62 50 98 46 62 38 54 2 50 38 46 46 38 50 2Z" fill="#fffaf7" stroke="#1b1418" stroke-width="4" stroke-linejoin="round"/></svg>
+<svg viewBox="0 0 100 100" class="hide-m" style="width:46px;top:6%;right:4%;transform:rotate(14deg)"><path d="M50 4 61 38 97 38 68 59 79 94 50 72 21 94 32 59 3 38 39 38Z" fill="#1b1418" stroke="#1b1418" stroke-width="4" stroke-linejoin="round"/></svg>
+<svg viewBox="0 0 100 100" class="hide-m" style="width:64px;top:58%;right:2%;transform:rotate(-10deg)"><path d="M62 6A46 46 0 1 0 94 72 36 36 0 1 1 62 6Z" fill="#ffe17a" stroke="#1b1418" stroke-width="4" stroke-linejoin="round"/><path d="M36 54q5 5 10 0" fill="none" stroke="#1b1418" stroke-width="4" stroke-linecap="round"/><circle cx="32" cy="64" r="4" fill="#ff8fb8"/></svg>
+</div>
 <div class="wrap">
 <header>
-  <div class="ghirlanda">🌸🍓🌿🍄🌷🌿🍓🌸</div>
-  <h1>I desideri di <span>Veronica</span> & <span>Giulia</span></h1>
-  <p class="sub">un piccolo giardino di regali, tra migliori amiche</p>
-  <div class="pizzo"></div>
+<svg viewBox="0 0 100 100" class="bg-star" style="width:120px;top:-26px;left:-20px;transform:rotate(-14deg)"><path d="M50 4 61 38 97 38 68 59 79 94 50 72 21 94 32 59 3 38 39 38Z" fill="#e8417e" stroke="#1b1418" stroke-width="4" stroke-linejoin="round"/></svg>
+<svg viewBox="0 0 100 100" class="bg-star" style="width:54px;bottom:12px;left:18%;transform:rotate(18deg)"><path d="M50 4 61 38 97 38 68 59 79 94 50 72 21 94 32 59 3 38 39 38Z" fill="#1b1418" stroke="#1b1418" stroke-width="4" stroke-linejoin="round"/></svg>
+<svg viewBox="0 0 100 100" class="bg-star" style="width:42px;top:18px;right:22%"><path d="M50 2C54 38 62 46 98 50 62 54 54 62 50 98 46 62 38 54 2 50 38 46 46 38 50 2Z" fill="#ffe17a" stroke="#1b1418" stroke-width="4" stroke-linejoin="round"/></svg>
+<svg viewBox="0 0 100 100" class="bg-star" style="width:90px;bottom:-18px;right:-14px;transform:rotate(10deg)"><path d="M50 4 61 38 97 38 68 59 79 94 50 72 21 94 32 59 3 38 39 38Z" fill="#fffaf7" stroke="#1b1418" stroke-width="4" stroke-linejoin="round"/></svg>
+<svg viewBox="0 0 100 100" class="bg-star" style="width:36px;top:24px;left:22%;transform:rotate(-12deg)"><path d="M50 88C20 66 6 50 8 32 10 16 30 8 50 28 70 8 90 16 92 32 94 50 80 66 50 88Z" fill="#fffaf7" stroke="#1b1418" stroke-width="5" stroke-linejoin="round"/></svg>
+  <h1>I desideri di<br>Veronica <span class="amp">&amp;</span> Giulia</h1>
+  <p class="sub">meow! la nostra lista regali 💗</p>
 </header>
 
 <section class="countdown">
-  <div class="card cd"><div class="nome">Veronica</div><div class="num" id="cdV">–</div><div class="data">giorni al 9 novembre 🎂</div></div>
-  <div class="card cd g"><div class="nome">Giulia</div><div class="num" id="cdG">–</div><div class="data">giorni al 6 dicembre 🎂</div></div>
+  <div class="card cd v"><svg viewBox="0 0 140 150" class="badge"><g stroke="#1b1418" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M104 128C130 128 136 100 120 92" fill="none" stroke-width="9"/><path d="M104 128C130 128 136 100 120 92" fill="none" stroke="#ff8fb8" stroke-width="3"/>
+<path d="M30 140C22 100 34 74 70 72 106 74 118 100 110 140Z" fill="#ff8fb8"/>
+<path d="M28 24 38 54 102 54 112 24 90 38 50 38Z" fill="#ff8fb8"/>
+<ellipse cx="70" cy="58" rx="40" ry="32" fill="#ff8fb8"/>
+<path d="M44 80q-4 14 4 22M96 80q4 14-4 22M50 112q10 6 0 16M90 112q-10 6 0 16M70 28v12M60 30l2 10M80 30l-2 10" fill="none"/>
+<path d="M30 56h12M28 66h12M98 56h12M100 66h12" fill="none" stroke-width="3"/>
+<path d="M54 54q4-5 8 0M78 54q4-5 8 0" fill="none"/>
+<path d="M66 64h8l-4 5z" fill="#1b1418"/><path d="M70 69q-5 6-10 2M70 69q5 6 10 2" fill="none" stroke-width="3"/>
+<path d="M58 138v-12M82 138v-12" fill="none" stroke-width="3"/></g>
+<ellipse cx="48" cy="66" rx="6" ry="3.5" fill="#e8417e" opacity=".55"/><ellipse cx="92" cy="66" rx="6" ry="3.5" fill="#e8417e" opacity=".55"/></svg><div class="nome">Veronica</div><div class="num" id="cdV">–</div><div class="data">giorni al 9 novembre 🎂</div></div>
+  <div class="card cd g"><svg viewBox="0 0 200 110" class="badge" style="width:110px;right:-18px"><g stroke="#1b1418" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M160 50C190 40 196 14 182 8" fill="none" stroke-width="9"/><path d="M160 50C190 40 196 14 182 8" fill="none" stroke="#fffaf7" stroke-width="3"/>
+<path d="M40 50C60 30 140 28 164 48 172 62 166 80 156 86L160 104H146L140 88H70L64 104H50L52 86C36 82 30 64 40 50Z" fill="#fffaf7"/>
+<path d="M14 30 22 10 34 24 48 22 58 6 62 30C72 46 60 66 38 66 14 66 4 48 14 30Z" fill="#fffaf7"/>
+<path d="M24 40q3-4 6 0M44 40q3-4 6 0" fill="none" stroke-width="3"/><path d="M34 48h6l-3 4z" fill="#1b1418"/></g>
+<g fill="#1b1418"><circle cx="80" cy="50" r="4"/><circle cx="100" cy="62" r="4"/><circle cx="120" cy="46" r="4"/><circle cx="140" cy="62" r="4"/><circle cx="92" cy="76" r="3.5"/><circle cx="128" cy="76" r="3.5"/><circle cx="150" cy="50" r="3"/><circle cx="68" cy="66" r="3.5"/></g></svg><div class="nome">Giulia</div><div class="num" id="cdG">–</div><div class="data">giorni al 6 dicembre 🎂</div></div>
 </section>
 
 <form class="card" id="form">
-  <h2 id="titoloForm">🌷 Aggiungi un desiderio</h2>
+  <h2 id="titoloForm">Aggiungi un desiderio ✨</h2>
   <input type="hidden" id="fid">
   <div><label>Cosa ti piace?</label><input id="fnome" required placeholder="es. Tazza a fiori"></div>
   <div><label>Per chi?</label><select id="fper"><option value="Veronica">Veronica</option><option value="Giulia">Giulia</option></select></div>
@@ -90,7 +125,7 @@ footer button{font-size:12px;padding:5px 12px;margin:3px}
   <div><label>Prezzo (€)</label><input id="fprezzo" type="number" step="0.01" min="0"></div>
   <div><label>Categoria</label><input id="fcat" list="cats" placeholder="es. Casa, Libri, Moda"><datalist id="cats"></datalist></div>
   <div class="full"><label>Note</label><textarea id="fnote" placeholder="taglia, colore, dove trovarlo..."></textarea></div>
-  <div class="full azioni"><button type="submit">🌸 Salva</button><button type="button" class="sec" id="annulla" style="display:none">Annulla</button></div>
+  <div class="full azioni"><button type="submit">Salva 💗</button><button type="button" class="sec" id="annulla" style="display:none">Annulla</button></div>
 </form>
 
 <div class="barra">
@@ -102,11 +137,11 @@ footer button{font-size:12px;padding:5px 12px;margin:3px}
 <div class="griglia" id="griglia"></div>
 
 <footer>
-  <div>🍄 lista condivisa online: si aggiorna da sola ogni 20 secondi 🍄</div>
+  <div>⭐ lista condivisa online: si aggiorna da sola ogni 20 secondi ⭐</div>
   <div style="margin-top:8px"><button class="sec" id="esporta">⬇ backup</button><button class="sec" id="importaBtn">⬆ ripristina backup</button><input type="file" id="importa" accept=".json" hidden></div>
 </footer>
 </div>
-<div class="stato" id="stato">🌿 caricamento…</div>
+<div class="stato" id="stato">⭐ caricamento…</div>
 
 <script>
 const KEY='regali-vg-4a5c62cacdc853c2';
@@ -131,16 +166,16 @@ function unisci(a,b){const del=new Set([...(a.deleted||[]),...(b.deleted||[])]);
 async function carica(){
  try{const t=await leggi(KEY);const remoto=t&&t.trim()?JSON.parse(t):{items:[]};db=unisci({items:[],deleted:db.deleted},remoto);
    // tieni modifiche locali non ancora salvate
-   localStorage.setItem(LS,JSON.stringify(db));stato('🌸 sincronizzato');}
+   localStorage.setItem(LS,JSON.stringify(db));stato('💗 sincronizzato');}
  catch(e){stato('⚠ offline: uso copia locale');}
  await caricaImmagini();mostra();
 }
 async function salva(){
- salvando=true;stato('🌿 salvataggio…');
+ salvando=true;stato('✨ salvataggio…');
  try{let remoto={items:[]};try{const t=await leggi(KEY);if(t&&t.trim())remoto=JSON.parse(t)}catch(e){}
    db=unisci(remoto,db);
    // rispetta modifiche locali più recenti
-   await scrivi(KEY,JSON.stringify(db));localStorage.setItem(LS,JSON.stringify(db));stato('🌸 salvato per entrambe');}
+   await scrivi(KEY,JSON.stringify(db));localStorage.setItem(LS,JSON.stringify(db));stato('💗 salvato per entrambe');}
  catch(e){localStorage.setItem(LS,JSON.stringify(db));stato('⚠ non salvato online: '+e.message);}
  salvando=false;mostra();
 }
@@ -161,7 +196,7 @@ function mostra(){
  const q=$('cerca').value.toLowerCase().trim();
  const lista=db.items.filter(i=>(filtro==='tutte'||i.per===filtro)&&(!q||[i.nome,i.cat,i.note,i.link,i.per].join(' ').toLowerCase().includes(q)));
  $('cats').innerHTML=[...new Set(db.items.map(i=>i.cat).filter(Boolean))].map(c=>`<option value="${esc(c)}">`).join('');
- const emoji=['🌷','🍓','🍄','🌼','🫖','🎀','🌸'];
+ const emoji=['🐯','⭐','💗','🐱','🌙','✨','🎀'];
  $('griglia').innerHTML=lista.length?lista.map((i,n)=>{const s=srcFoto(i);return `<div class="card item">
   <div class="foto">${s?`<img src="${esc(s)}" alt="" loading="lazy" onerror="this.replaceWith('${emoji[n%7]}')">`:emoji[n%7]}</div>
   <div class="corpo"><h3>${esc(i.nome)}</h3>
@@ -170,11 +205,11 @@ function mostra(){
   ${i.link?`<a class="link" href="${esc(i.link)}" target="_blank" rel="noopener">🔗 vai al link</a>`:''}
   ${i.note?`<div class="note">${esc(i.note)}</div>`:''}
   <div class="azioni" style="margin-top:auto"><button class="sec" onclick="mod('${i.id}')">✏ Modifica</button><button class="sec" onclick="del('${i.id}')">🗑</button></div></div></div>`}).join('')
- :'<div class="vuoto">🌱 Ancora nessun desiderio qui… pianta il primo!</div>';
+ :'<div class="vuoto"><svg viewBox="0 0 120 110" width="90"><path d="M20 30C14 8 46 2 60 14 76 2 108 8 102 34 118 50 112 84 92 92 80 108 40 108 28 94 6 88 2 52 20 30Z" fill="#ff8fb8" stroke="#1b1418" stroke-width="4"/><ellipse cx="44" cy="52" rx="7" ry="9" fill="#1b1418"/><ellipse cx="78" cy="52" rx="7" ry="9" fill="#1b1418"/><circle cx="46" cy="49" r="2.5" fill="#fff"/><circle cx="80" cy="49" r="2.5" fill="#fff"/><path d="M54 66q7 7 14 0" fill="none" stroke="#1b1418" stroke-width="4" stroke-linecap="round"/><ellipse cx="34" cy="66" rx="7" ry="4" fill="#e8417e" opacity=".6"/><ellipse cx="88" cy="66" rx="7" ry="4" fill="#e8417e" opacity=".6"/></svg>Ancora nessun desiderio… aggiungi il primo!</div>';
 }
-function reset(){$('form').reset();$('fid').value='';fotoNuova=null;$('anteprima').style.display='none';$('titoloForm').textContent='🌷 Aggiungi un desiderio';$('annulla').style.display='none'}
+function reset(){$('form').reset();$('fid').value='';fotoNuova=null;$('anteprima').style.display='none';$('titoloForm').textContent='Aggiungi un desiderio ✨';$('annulla').style.display='none'}
 function mod(id){const i=db.items.find(x=>x.id===id);if(!i)return;$('fid').value=id;$('fnome').value=i.nome;$('fper').value=i.per;$('flink').value=i.link||'';$('fimgurl').value=i.imgUrl||'';$('fprezzo').value=i.prezzo||'';$('fcat').value=i.cat||'';$('fnote').value=i.note||'';
- const s=srcFoto(i);if(s){$('anteprima').src=s;$('anteprima').style.display='block'}$('titoloForm').textContent='✏ Modifica desiderio';$('annulla').style.display='';window.scrollTo({top:$('form').offsetTop-10,behavior:'smooth'})}
+ const s=srcFoto(i);if(s){$('anteprima').src=s;$('anteprima').style.display='block'}$('titoloForm').textContent='Modifica desiderio ✏️';$('annulla').style.display='';window.scrollTo({top:$('form').offsetTop-10,behavior:'smooth'})}
 function del(id){if(!confirm('Eliminare questo desiderio?'))return;db.items=db.items.filter(x=>x.id!==id);db.deleted=[...(db.deleted||[]),id];salva()}
 
 $('ffile').onchange=async e=>{const f=e.target.files[0];if(!f)return;fotoNuova=await ridimensiona(f);$('anteprima').src=fotoNuova;$('anteprima').style.display='block';$('fimgurl').value=''};
@@ -183,7 +218,7 @@ $('form').onsubmit=async e=>{e.preventDefault();const id=$('fid').value||(Date.n
  const vecchio=db.items.find(x=>x.id===id)||{creato:Date.now()};
  const it={...vecchio,id,nome:$('fnome').value.trim(),per:$('fper').value,link:$('flink').value.trim(),prezzo:$('fprezzo').value,cat:$('fcat').value.trim(),note:$('fnote').value.trim(),upd:Date.now()};
  const url=$('fimgurl').value.trim();
- if(fotoNuova){const k=KEY+'-img-'+id+'-'+Date.now().toString(36);stato('🌿 carico la foto…');
+ if(fotoNuova){const k=KEY+'-img-'+id+'-'+Date.now().toString(36);stato('✨ carico la foto…');
    try{await scrivi(k,fotoNuova);it.imgKey=k;it.imgUrl='';imgCache[k]=fotoNuova;try{localStorage.setItem('img:'+k,fotoNuova)}catch(e){}}catch(err){alert('Foto non caricata: '+err.message)}}
  else if(url){it.imgUrl=url;delete it.imgKey}
  db.items=[it,...db.items.filter(x=>x.id!==id)];reset();mostra();await salva()};
