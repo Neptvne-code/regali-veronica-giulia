@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🌸 I desideri di Veronica & Giulia 🌸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Dancing+Script:wght@600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--rosa:#e8a0b4;--rosa-s:#f7dbe3;--rosa-c:#fdf1f4;--rosa-d:#c86b88;--nero:#1f1a1c;--bianco:#fffdf9;--carta:#fbf5ef}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Lora',Georgia,serif;color:var(--nero);background:var(--carta);
+background-image:radial-gradient(circle at 10px 10px,rgba(232,160,180,.25) 2px,transparent 2.5px),radial-gradient(circle at 30px 30px,rgba(31,26,28,.06) 1.5px,transparent 2px);background-size:40px 40px;min-height:100vh}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+header{text-align:center;padding:26px 12px 14px;position:relative}
+.ghirlanda{font-size:22px;letter-spacing:6px}
+h1{font-family:'Dancing Script',cursive;font-size:clamp(34px,8vw,58px);margin:6px 0 0;color:var(--nero)}
+h1 span{color:var(--rosa-d)}
+.sub{font-family:'Playfair Display',serif;font-style:italic;color:#6b5a60;margin:4px 0 0}
+.pizzo{height:14px;margin:14px auto;max-width:600px;background:radial-gradient(circle at 7px 0,transparent 6px,var(--rosa) 6.5px,var(--rosa) 7.5px,transparent 8px);background-size:14px 14px}
+.card{background:var(--bianco);border:1.5px solid var(--nero);border-radius:18px;box-shadow:4px 4px 0 var(--rosa);padding:16px;position:relative}
+.countdown{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
+.cd{text-align:center}
+.cd .nome{font-family:'Dancing Script',cursive;font-size:30px}
+.cd .num{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:var(--rosa-d);line-height:1}
+.cd .data{font-size:13px;color:#6b5a60}
+.cd::before{content:"🍄";position:absolute;top:-12px;left:-8px;font-size:22px}
+.cd.g::before{content:"🍓"}
+form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+form h2,.full{grid-column:1/-1}
+h2{font-family:'Playfair Display',serif;font-style:italic;margin:0 0 4px;font-size:22px}
+label{font-size:13px;color:#6b5a60;display:block;margin-bottom:3px}
+input,select,textarea{width:100%;font:inherit;padding:9px 11px;border:1.5px solid var(--nero);border-radius:12px;background:var(--rosa-c);color:var(--nero)}
+textarea{min-height:60px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px dashed var(--rosa-d);outline-offset:2px}
+button{font:inherit;cursor:pointer;border:1.5px solid var(--nero);border-radius:999px;padding:9px 18px;background:var(--rosa);color:var(--nero);font-weight:600;box-shadow:2px 2px 0 var(--nero);transition:transform .1s}
+button:active{transform:translate(2px,2px);box-shadow:none}
+button.sec{background:var(--bianco)}
+button.nero{background:var(--nero);color:var(--bianco)}
+.azioni{display:flex;gap:8px;flex-wrap:wrap}
+.anteprima{max-width:120px;max-height:120px;border-radius:10px;border:1.5px solid var(--nero);display:none;margin-top:6px}
+.barra{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.barra input{flex:1;min-width:180px}
+.filtri{display:flex;gap:6px;flex-wrap:wrap}
+.filtri button{padding:7px 14px;font-size:14px;background:var(--bianco)}
+.filtri button.on{background:var(--nero);color:var(--bianco)}
+.griglia{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.item{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.item .foto{aspect-ratio:1/1;background:var(--rosa-s);display:flex;align-items:center;justify-content:center;font-size:48px;border-bottom:1.5px solid var(--nero)}
+.item .foto img{width:100%;height:100%;object-fit:cover}
+.item .corpo{padding:12px;flex:1;display:flex;flex-direction:column;gap:6px}
+.item h3{margin:0;font-family:'Playfair Display',serif;font-size:19px}
+.tag{display:inline-block;font-size:12px;padding:2px 10px;border-radius:999px;border:1px solid var(--nero);margin-right:4px}
+.tag.v{background:var(--rosa)}.tag.gi{background:var(--nero);color:var(--bianco)}.tag.c{background:var(--bianco)}
+.prezzo{font-family:'Playfair Display',serif;font-weight:700;color:var(--rosa-d)}
+.note{font-size:14px;color:#4a3d42;font-style:italic;white-space:pre-wrap}
+.item a.link{color:var(--nero);font-size:14px;word-break:break-all}
+.item .azioni button{padding:5px 12px;font-size:13px}
+.vuoto{text-align:center;padding:40px;font-style:italic;color:#6b5a60;grid-column:1/-1}
+.stato{position:fixed;bottom:12px;right:12px;background:var(--bianco);border:1.5px solid var(--nero);border-radius:999px;padding:6px 14px;font-size:13px;box-shadow:2px 2px 0 var(--rosa);z-index:9}
+footer{text-align:center;margin:30px 0 60px;font-size:13px;color:#6b5a60}
+footer button{font-size:12px;padding:5px 12px;margin:3px}
+@media(max-width:600px){form{grid-template-columns:1fr}.countdown{gap:10px}.cd .num{font-size:30px}.cd .nome{font-size:24px}.griglia{grid-template-columns:1fr 1fr;gap:12px}.item h3{font-size:16px}}
+@media(max-width:380px){.griglia{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="ghirlanda">🌸🍓🌿🍄🌷🌿🍓🌸</div>
+  <h1>I desideri di <span>Veronica</span> & <span>Giulia</span></h1>
+  <p class="sub">un piccolo giardino di regali, tra migliori amiche</p>
+  <div class="pizzo"></div>
+</header>
+
+<section class="countdown">
+  <div class="card cd"><div class="nome">Veronica</div><div class="num" id="cdV">–</div><div class="data">giorni al 9 novembre 🎂</div></div>
+  <div class="card cd g"><div class="nome">Giulia</div><div class="num" id="cdG">–</div><div class="data">giorni al 6 dicembre 🎂</div></div>
+</section>
+
+<form class="card" id="form">
+  <h2 id="titoloForm">🌷 Aggiungi un desiderio</h2>
+  <input type="hidden" id="fid">
+  <div><label>Cosa ti piace?</label><input id="fnome" required placeholder="es. Tazza a fiori"></div>
+  <div><label>Per chi?</label><select id="fper"><option value="Veronica">Veronica</option><option value="Giulia">Giulia</option></select></div>
+  <div class="full"><label>Link</label><input id="flink" type="url" placeholder="https://..."></div>
+  <div><label>Foto (dal telefono / pc)</label><input id="ffile" type="file" accept="image/*"></div>
+  <div><label>…oppure link di un'immagine</label><input id="fimgurl" type="url" placeholder="https://...jpg"></div>
+  <div class="full"><img id="anteprima" class="anteprima" alt=""></div>
+  <div><label>Prezzo (€)</label><input id="fprezzo" type="number" step="0.01" min="0"></div>
+  <div><label>Categoria</label><input id="fcat" list="cats" placeholder="es. Casa, Libri, Moda"><datalist id="cats"></datalist></div>
+  <div class="full"><label>Note</label><textarea id="fnote" placeholder="taglia, colore, dove trovarlo..."></textarea></div>
+  <div class="full azioni"><button type="submit">🌸 Salva</button><button type="button" class="sec" id="annulla" style="display:none">Annulla</button></div>
+</form>
+
+<div class="barra">
+  <input id="cerca" type="search" placeholder="🔍 Cerca per nome, categoria, note...">
+  <div class="filtri" id="filtri">
+    <button data-f="tutte" class="on">Tutte</button><button data-f="Veronica">Veronica</button><button data-f="Giulia">Giulia</button>
+  </div>
+</div>
+<div class="griglia" id="griglia"></div>
+
+<footer>
+  <div>🍄 lista condivisa online: si aggiorna da sola ogni 20 secondi 🍄</div>
+  <div style="margin-top:8px"><button class="sec" id="esporta">⬇ backup</button><button class="sec" id="importaBtn">⬆ ripristina backup</button><input type="file" id="importa" accept=".json" hidden></div>
+</footer>
+</div>
+<div class="stato" id="stato">🌿 caricamento…</div>
+
+<script>
+const KEY='regali-vg-4a5c62cacdc853c2';
+const API='https://textdb.online/';
+const LS='regali-vg-cache';
+let db={items:[],deleted:[]};
+let imgCache={};
+let filtro='tutte', fotoNuova=null, salvando=false;
+const $=id=>document.getElementById(id);
+const stato=t=>$('stato').textContent=t;
+
+function giorni(m,d){const o=new Date();o.setHours(0,0,0,0);let t=new Date(o.getFullYear(),m,d);if(t<o)t=new Date(o.getFullYear()+1,m,d);return Math.round((t-o)/864e5)}
+function cd(){const v=giorni(10,9),g=giorni(11,6);$('cdV').textContent=v===0?'🎉 Oggi!':v;$('cdG').textContent=g===0?'🎉 Oggi!':g}
+
+async function leggi(k){const r=await fetch(API+k+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error(r.status);return r.text()}
+async function scrivi(k,v){const b=new URLSearchParams();b.set('key',k);b.set('value',v);const r=await fetch(API+'update',{method:'POST',body:b});const j=await r.json();if(j.status!==1)throw new Error(j.error||'errore');}
+
+function unisci(a,b){const del=new Set([...(a.deleted||[]),...(b.deleted||[])]);const m={};
+ for(const it of [...(a.items||[]),...(b.items||[])]){if(del.has(it.id))continue;if(!m[it.id]||(it.upd||0)>(m[it.id].upd||0))m[it.id]=it}
+ return{items:Object.values(m).sort((x,y)=>(y.creato||0)-(x.creato||0)),deleted:[...del].slice(-500)}}
+
+async function carica(){
+ try{const t=await leggi(KEY);const remoto=t&&t.trim()?JSON.parse(t):{items:[]};db=unisci({items:[],deleted:db.deleted},remoto);
+   // tieni modifiche locali non ancora salvate
+   localStorage.setItem(LS,JSON.stringify(db));stato('🌸 sincronizzato');}
+ catch(e){stato('⚠ offline: uso copia locale');}
+ await caricaImmagini();mostra();
+}
+async function salva(){
+ salvando=true;stato('🌿 salvataggio…');
+ try{let remoto={items:[]};try{const t=await leggi(KEY);if(t&&t.trim())remoto=JSON.parse(t)}catch(e){}
+   db=unisci(remoto,db);
+   // rispetta modifiche locali più recenti
+   await scrivi(KEY,JSON.stringify(db));localStorage.setItem(LS,JSON.stringify(db));stato('🌸 salvato per entrambe');}
+ catch(e){localStorage.setItem(LS,JSON.stringify(db));stato('⚠ non salvato online: '+e.message);}
+ salvando=false;mostra();
+}
+async function caricaImmagini(){
+ await Promise.all(db.items.filter(i=>i.imgKey&&!imgCache[i.imgKey]).map(async i=>{
+  const c=localStorage.getItem('img:'+i.imgKey);if(c){imgCache[i.imgKey]=c;return}
+  try{const t=await leggi(i.imgKey);if(t.startsWith('data:image')){imgCache[i.imgKey]=t;try{localStorage.setItem('img:'+i.imgKey,t)}catch(e){}}}catch(e){}
+ }));
+}
+function ridimensiona(file){return new Promise((ok,ko)=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{
+ const max=480;let w=im.width,h=im.height;if(w>h&&w>max){h=h*max/w;w=max}else if(h>max){w=w*max/h;h=max}
+ const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(im,0,0,w,h);
+ let q=.75,d=c.toDataURL('image/jpeg',q);while(d.length>150000&&q>.3){q-=.1;d=c.toDataURL('image/jpeg',q)}ok(d)};im.onerror=ko;im.src=r.result};r.readAsDataURL(file)})}
+
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function srcFoto(i){return i.imgKey?imgCache[i.imgKey]:i.imgUrl}
+function mostra(){
+ const q=$('cerca').value.toLowerCase().trim();
+ const lista=db.items.filter(i=>(filtro==='tutte'||i.per===filtro)&&(!q||[i.nome,i.cat,i.note,i.link,i.per].join(' ').toLowerCase().includes(q)));
+ $('cats').innerHTML=[...new Set(db.items.map(i=>i.cat).filter(Boolean))].map(c=>`<option value="${esc(c)}">`).join('');
+ const emoji=['🌷','🍓','🍄','🌼','🫖','🎀','🌸'];
+ $('griglia').innerHTML=lista.length?lista.map((i,n)=>{const s=srcFoto(i);return `<div class="card item">
+  <div class="foto">${s?`<img src="${esc(s)}" alt="" loading="lazy" onerror="this.replaceWith('${emoji[n%7]}')">`:emoji[n%7]}</div>
+  <div class="corpo"><h3>${esc(i.nome)}</h3>
+  <div><span class="tag ${i.per==='Veronica'?'v':'gi'}">${esc(i.per)}</span>${i.cat?`<span class="tag c">${esc(i.cat)}</span>`:''}</div>
+  ${i.prezzo?`<div class="prezzo">€ ${Number(i.prezzo).toFixed(2)}</div>`:''}
+  ${i.link?`<a class="link" href="${esc(i.link)}" target="_blank" rel="noopener">🔗 vai al link</a>`:''}
+  ${i.note?`<div class="note">${esc(i.note)}</div>`:''}
+  <div class="azioni" style="margin-top:auto"><button class="sec" onclick="mod('${i.id}')">✏ Modifica</button><button class="sec" onclick="del('${i.id}')">🗑</button></div></div></div>`}).join('')
+ :'<div class="vuoto">🌱 Ancora nessun desiderio qui… pianta il primo!</div>';
+}
+function reset(){$('form').reset();$('fid').value='';fotoNuova=null;$('anteprima').style.display='none';$('titoloForm').textContent='🌷 Aggiungi un desiderio';$('annulla').style.display='none'}
+function mod(id){const i=db.items.find(x=>x.id===id);if(!i)return;$('fid').value=id;$('fnome').value=i.nome;$('fper').value=i.per;$('flink').value=i.link||'';$('fimgurl').value=i.imgUrl||'';$('fprezzo').value=i.prezzo||'';$('fcat').value=i.cat||'';$('fnote').value=i.note||'';
+ const s=srcFoto(i);if(s){$('anteprima').src=s;$('anteprima').style.display='block'}$('titoloForm').textContent='✏ Modifica desiderio';$('annulla').style.display='';window.scrollTo({top:$('form').offsetTop-10,behavior:'smooth'})}
+function del(id){if(!confirm('Eliminare questo desiderio?'))return;db.items=db.items.filter(x=>x.id!==id);db.deleted=[...(db.deleted||[]),id];salva()}
+
+$('ffile').onchange=async e=>{const f=e.target.files[0];if(!f)return;fotoNuova=await ridimensiona(f);$('anteprima').src=fotoNuova;$('anteprima').style.display='block';$('fimgurl').value=''};
+$('fimgurl').oninput=e=>{if(e.target.value){fotoNuova=null;$('anteprima').src=e.target.value;$('anteprima').style.display='block'}};
+$('form').onsubmit=async e=>{e.preventDefault();const id=$('fid').value||(Date.now().toString(36)+Math.random().toString(36).slice(2,7));
+ const vecchio=db.items.find(x=>x.id===id)||{creato:Date.now()};
+ const it={...vecchio,id,nome:$('fnome').value.trim(),per:$('fper').value,link:$('flink').value.trim(),prezzo:$('fprezzo').value,cat:$('fcat').value.trim(),note:$('fnote').value.trim(),upd:Date.now()};
+ const url=$('fimgurl').value.trim();
+ if(fotoNuova){const k=KEY+'-img-'+id+'-'+Date.now().toString(36);stato('🌿 carico la foto…');
+   try{await scrivi(k,fotoNuova);it.imgKey=k;it.imgUrl='';imgCache[k]=fotoNuova;try{localStorage.setItem('img:'+k,fotoNuova)}catch(e){}}catch(err){alert('Foto non caricata: '+err.message)}}
+ else if(url){it.imgUrl=url;delete it.imgKey}
+ db.items=[it,...db.items.filter(x=>x.id!==id)];reset();mostra();await salva()};
+$('annulla').onclick=reset;
+$('cerca').oninput=mostra;
+$('filtri').onclick=e=>{const b=e.target.closest('button');if(!b)return;filtro=b.dataset.f;[...$('filtri').children].forEach(x=>x.classList.toggle('on',x===b));mostra()};
+$('esporta').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({...db,img:imgCache})],{type:'application/json'}));a.download='regali-backup.json';a.click()};
+$('importaBtn').onclick=()=>$('importa').click();
+$('importa').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);Object.assign(imgCache,d.img||{});db=unisci(db,{items:(d.items||[]).map(i=>({...i,upd:Date.now()}))});salva()}catch(err){alert('File non valido')}};r.readAsText(f)};
+
+try{const c=JSON.parse(localStorage.getItem(LS));if(c&&c.items)db=c}catch(e){}
+cd();mostra();carica();
+setInterval(()=>{if(!salvando&&document.visibilityState==='visible'&&!$('fid').value)carica()},20000);
+</script>
+</body>
+</html>
